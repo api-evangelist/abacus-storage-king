@@ -1,0 +1,100 @@
+generated: '2026-10-21'
+method: searched
+source: https://www.storageking.com.au/pages/privacy
+signals:
+  data_subject_request:
+    url: https://www.storageking.com.au/pages/privacy
+    section: '8. Accessing and amending your personal information'
+    rights_named: [access, correction]
+    channel: The Privacy Officer, Storage King, Level 17, 99 Walker Street, North Sydney NSW
+    evidence:
+    - source: https://www.storageking.com.au/pages/privacy
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        You have a right to access your personal information which Storage King holds about you. If you make a
+        request to access your personal information, we will ask you to verify your identity and specify the
+        information you require. You can also request an amendment to any of your personal information if you
+        consider that it contains inaccurate information.
+    note: >-
+      Access and correction rights (Australian Privacy Principles / NZ Privacy Act 2020) via the Privacy Officer.
+      No deletion or portability right and no response SLA is stated. The Terms & Conditions candidate ("Your
+      rights under this Agreement are in contract only") concerns the storage licence, not data rights, and is
+      not recorded.
+  subprocessors:
+    url: https://www.storageking.com.au/pages/privacy
+    section: '5.1 Storage'
+    evidence:
+    - source: https://www.storageking.com.au/pages/privacy
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        Our information storage providers may be located in Australia and overseas, including in any country where
+        we, our related bodies corporate, or our service providers (and their sub-processors) operate, host
+        infrastructure, or provide support services.
+    note: >-
+      Acknowledges service providers and their sub-processors but publishes no named sub-processor list. Named
+      third parties elsewhere in the policy are AplyID (identity verification) and Boardroom (share registry).
+  data_residency:
+    url: https://www.storageking.com.au/pages/privacy
+    section: '5.1 Storage'
+    evidence:
+    - source: https://www.storageking.com.au/pages/privacy
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        These currently include, but are not limited to, Taiwan, Singapore, Finland, Chile, Belgium, North America,
+        South America, New Zealand, the Netherlands, Denmark and Ireland. The countries in which your information is
+        held may change from time to time without notice to you, and we will take reasonable steps to ensure that
+        any overseas recipient handles your information in a manner consistent with the Australian Privacy
+        Principles and the New Zealand Privacy Act 2020.
+    note: >-
+      No residency commitment: data may be held in Australia and a non-exhaustive list of overseas locations that
+      can change without notice.
+  ai_transparency:
+    url: https://www.storageking.com.au/pages/privacy
+    section: '3.4 Automated Decisions'
+    evidence:
+    - source: https://www.storageking.com.au/pages/privacy
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        Storage King may use aggregated and anonymised data, combined with commercial analytics, within its computer
+        programs to determine optimum pricing for storage units. These automated pricing models may inform decisions
+        such as: Starting rates Pricing adjustments and increases Group type reclassifications
+    note: >-
+      Discloses automated (algorithmic) pricing decisions and states the inputs exclude personally identifiable
+      information. It is an automated-decision disclosure, not a statement about AI models or AI-generated content.
+  incident_notification:
+    url: https://www.storageking.com.au/pages/privacy
+    section: '10. Data Breach'
+    evidence:
+    - source: https://www.storageking.com.au/pages/privacy
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        Storage King has a data breach response plan which sets out procedures and clear lines of authority in the
+        event of a data breach. Where it is determined that notifiable data breach has occurred, we will report the
+        breach to the Office of the Australian Information Commissioner/Privacy Commissioner NZ and you as
+        appropriate and in accordance with applicable laws.
+    note: Commits to regulator and individual notification under the notifiable data breach schemes; no timeframe stated.
+  data_retention:
+    url: https://www.storageking.com.au/pages/privacy
+    section: '5.2 Data security'
+    evidence:
+    - source: https://www.storageking.com.au/pages/privacy
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        We endeavour to ensure that personal information is kept as current as possible and that irrelevant or
+        excessive data is deleted or made anonymous as soon as reasonably practicable. However, some personal
+        information may be retained for varying time periods to comply with legal and regulatory obligations and
+        for other legitimate business reasons.
+    - source: https://www.storageking.com.au/pages/privacy
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        Storage King retains the verification result for as long as we need it to operate your storage account and
+        meet our legal, tax and regulatory obligations. Biometric templates generated during the verification
+        process are managed by AplyID in accordance with its retention policies and are not retained by Storage King.
+    note: Qualitative retention principle with no fixed periods; identity-verification results retained for the account's life plus legal obligations.

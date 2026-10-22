@@ -1,0 +1,27 @@
+generated: '2026-10-21'
+method: none
+source:
+- https://www.storageking.com.au/llms.txt
+- https://zapier.com/apps/abacus-storage-king/integrations
+- https://n8n.io/integrations/abacus-storage-king/
+- https://composio.dev/toolkits/abacus-storage-king
+- https://monid.ai/tools/abacus-storage-king
+checked:
+- https://zapier.com/apps/storage-king/integrations
+- https://www.make.com/en/integrations/storage-king
+- https://n8n.io/integrations/storage-king/
+- https://www.storageking.com.au/llms.txt
+- https://composio.dev/toolkits/abacus-storage-king
+- https://monid.ai/tools/abacus-storage-king
+- https://n8n.io/integrations/abacus-storage-king/
+- https://zapier.com/apps/abacus-storage-king/integrations
+summary: 'No integration listings or named partners were found. Storage King runs a consumer self-storage site on
+  Shopify, and it publishes no integrations page, partner page or app marketplace listing. Its OpenAPI, AsyncAPI
+  and MCP contracts are not held in the catalog, so the contract had no operations that name another service. Probe
+  results: https://zapier.com/apps/storage-king/integrations -> HTTP 404; https://www.make.com/en/integrations/storage-king
+  -> HTTP 403 (Make refused the request, so this listing is unverified rather than absent.); https://n8n.io/integrations/storage-king/
+  -> HTTP 404; https://www.storageking.com.au/llms.txt -> HTTP 200 (The 55-page site index lists no integrations,
+  partners or developer pages.)'
+marketplace_apps: []
+edges: []
+templates: []

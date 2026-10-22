@@ -1,0 +1,46 @@
+type: MCPServer
+name: Storage King Storefront MCP (Shopify platform)
+description: >-
+  www.storageking.com.au runs on Shopify. Shopify serves a Storefront MCP endpoint at /api/mcp on every
+  storefront, and on this store it answers. Storage King does not document or advertise this endpoint anywhere:
+  its llms.txt says nothing about MCP, it has no developer docs, and Shopify operates the server, not the
+  provider. Shopify's documentation says the catalog and cart tools were removed from /api/mcp, so the only
+  tool left is search_shop_policies_and_faqs. That matches the pre-flight probe, which recorded a 1-operation
+  JSON response from this endpoint. We did not call the server ourselves: the provider does not advertise it,
+  so probe-safety rule 1 forbids JSON-RPC calls to it.
+generated: '2026-10-21'
+method: searched
+source: https://shopify.dev/docs/apps/build/storefront-mcp/servers/storefront
+status: platform-provided
+operator: Shopify (platform), not Abacus Storage King
+deployment:
+  mode: remote
+  endpoint: https://www.storageking.com.au/api/mcp
+  auth: unknown
+  verified: searched
+  note: >-
+    The endpoint exists because of the Shopify platform; the provider did not publish it. A plain GET returns
+    404 text/html (2026-10-21), which is normal for a JSON-RPC POST endpoint. The pre-flight dossier
+    (2026-10-21) recorded an application/json response of 1257 bytes listing 1 operation.
+    /.well-known/oauth-protected-resource returned 200 and names the authorization server
+    https://shopify.com/authentication/34944974893.
+evidence:
+  - url: https://www.storageking.com.au/api/mcp
+    method: GET
+    status: 404
+  - url: https://www.storageking.com.au/.well-known/oauth-protected-resource
+    method: GET
+    status: 200
+  - url: https://shopify.dev/docs/apps/build/storefront-mcp/servers/storefront
+    note: Shopify documents the https://{shop}/api/mcp pattern and its tools
+tools:
+  - name: search_shop_policies_and_faqs
+    description: Answers questions about the store's policies and FAQs (Shopify's description).
+    provenance: documented-by-platform
+tools_removed_per_platform_docs:
+  - search_catalog
+  - get_product_details
+  - get_cart
+  - update_cart
+x-tool-names-source: >-
+  The tool names come from Shopify's documentation, not from a tools/list call we made.

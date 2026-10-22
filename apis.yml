@@ -1,23 +1,109 @@
 aid: abacus-storage-king
+
 name: Abacus Storage King
-description: 'Abacus Storage King is a company surfaced via the API Evangelist harvest backlog (source:
-  australia-apidays-2026) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Abacus Storage King (ASX: ASK), which now trades as Storage King Group, is an ASX-listed self-storage owner and operator. Its stapled entities are Abacus Storage Operations Limited and Abacus Storage Property Trust. Under the Storage King brand it runs a network of more than 200 owned and managed self-storage facilities across Australia and New Zealand, renting storage units to households and businesses. It publishes no public developer API, documentation or developer portal; its web presence is the consumer storage site www.storageking.com.au and the investor site investors.storageking.com.au.'
+
 url: https://raw.githubusercontent.com/api-evangelist/abacus-storage-king/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:australia-apidays-2026
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-21 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-21'
+
 modified: '2026-10-21'
+
 tags:
 - Company
-apis: []
+- Self Storage
+- Real Estate
+- REIT
+- Australia
+- New Zealand
+- ASX Listed
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
+image: https://cdn.shopify.com/s/files/1/0349/4497/4893/files/storage-king-business-commercial_op2.jpg?v=1750836986
+
 common:
+- type: LLMsTxt
+  url: llms/abacus-storage-king-llms.txt
+- type: MCPServer
+  url: mcp/abacus-storage-king-mcp.yml
+- type: WellKnown
+  url: well-known/abacus-storage-king-well-known.yml
+- type: Hosts
+  url: hosts/abacus-storage-king-hosts.yml
+- type: Vendors
+  url: vendors/abacus-storage-king-vendors.yml
+- type: ChangeLog
+  url: https://www.storageking.com.au/pages/releases
+- type: DomainSecurity
+  url: security/abacus-storage-king-domain-security.yml
 - type: Website
-  url: https://abacusstorageking.com.au/
+  url: https://www.storageking.com.au/
+- type: InvestorRelations
+  url: https://investors.storageking.com.au/
+- type: Support
+  url: https://www.storageking.com.au/pages/contact
+- type: HelpCenter
+  url: https://www.storageking.com.au/pages/advice-and-faqs
+- type: Blog
+  url: https://www.storageking.com.au/blogs/hints-and-tips/
+- type: About
+  url: https://www.storageking.com.au/pages/about-us
+- type: TermsOfService
+  url: https://www.storageking.com.au/pages/terms-conditions
+- type: PrivacyPolicy
+  url: https://www.storageking.com.au/pages/privacy
+- type: LinkedIn
+  url: https://www.linkedin.com/company/storage-king
+
+apis: []
+
+x-coverage:
+  state: covered
+  reason: identity-verified
+  detail: The stub Website https://abacusstorageking.com.au/ gave no HTTP status (connection failed, as did www.). investors.storageking.com.au names the "ASK 2026 AGM" and lists the Abacus Storage Operations Limited and Abacus Storage Property Trust constitutions, and it links www.storageking.com.au as its own site. That site is now the Website. No API, developer portal or documentation was found.
+  evidence:
+  - url: https://abacusstorageking.com.au/
+    status: 0
+  - url: https://www.storageking.com.au/
+    status: 200
+  - url: https://investors.storageking.com.au/
+    status: 200
+  - url: https://investors.storageking.com.au/governance
+    status: 200
+  - url: https://investors.storageking.com.au/asx-announcements
+    status: 200
+  - url: https://www.storageking.com.au/pages/contact
+    status: 200
+  - url: https://www.storageking.com.au/pages/advice-and-faqs
+    status: 200
+  - url: https://www.storageking.com.au/blogs/hints-and-tips/
+    status: 200
+  - url: https://www.storageking.com.au/pages/about-us
+    status: 200
+  - url: https://www.storageking.com.au/pages/terms-conditions
+    status: 200
+  - url: https://www.storageking.com.au/pages/privacy
+    status: 200
+  - url: https://www.linkedin.com/company/storage-king
+    status: 200
+x-enrichment:
+  date: '2026-10-21'
+  status: enriched
+  artifacts_added: 12
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=anthropic,regulatory=anthropic
